@@ -1,0 +1,21 @@
+Source: yat
+Section: misc
+Priority: optional
+Maintainer: Rohan Garg <rohangarg@kubuntu.org>
+Build-Depends: debhelper (>= 9), qtdeclarative5-private-dev,
+ qtbase5-dev, qtbase5-private-dev
+Standards-Version: 3.9.5
+Homepage: https://github.com/jorgen/yat
+
+Package: qml-module-yat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: a qml plugin for the a VT100 emulation screen
+ Yat is a qml plugin for the a VT100 emulation screen.
+
+Package: yat-dbg
+Architecture: any
+Section: debug
+Depends: qml-module-yat (= ${binary:Version}), ${misc:Depends}
+Description: a qml plugin for the a VT100 emulation screen -- debug package
+ This package contains the debug symbols for the qml-module-yat package.
